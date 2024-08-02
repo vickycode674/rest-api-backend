@@ -7,7 +7,7 @@ const dataRoutes = require('./routes/dataRoutes');
 app.use(bodyParser.json());
 
 // Routes
-app.use('/api', dataRoutes);
+app.use('/', dataRoutes);
 
 // Catch-all route for unmatched paths
 app.use((req, res, next) => {
