@@ -1,8 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const { processData, getOperationCode } = require('../controllers/dataController');
+const dataController = require('./controllers/dataController');
 
-router.post('/data', processData);
-router.get('/data', getOperationCode);
-
-module.exports = router;
+router.get('/somepath', dataController.getData); // Ensure this is correct
